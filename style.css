@@ -15,3 +15,11 @@ header{
     color: white;
     background-color:transparent;
 }
+
+td{
+    width: 25%;
+}
+.line{
+    border-top: 1px dashed white;
+    border-bottom: 1px dashed white;
+}
