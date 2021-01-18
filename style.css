@@ -2,12 +2,18 @@ body{
     background-color: #161B22;
     color: white;
 }
+
 .main{
     width: 40%;
 }
+
 header{
     display: flex;
     justify-content: space-between;
+}
+
+.tableOut table{
+    padding-top: 2%;
 }
 
 #submitB{
