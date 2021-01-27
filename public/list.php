@@ -4,7 +4,7 @@
 require __DIR__ . '/../bootstrap.php';
 
 // Получаем список объявлений
-$posts = $postService->getAllPosts();
+// $posts = $postService->getAllPosts();
 
 // Вызываем вид, чтобы отобразить их
-require __DIR__ . '/../view/list.phtml';
+require __DIR__ . '/../view/outPut.phtml';

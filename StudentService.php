@@ -1,12 +1,12 @@
 <?php
 
-class PostService
+class StudentService
 {
-    private $post = [];
+    private $students = [];
 
-    private function createPost($name, $surname, $sex, $groupNumber, $email, $points, $year, $city)
+    private function createStudent($name, $surname, $sex, $groupNumber, $email, $points, $year, $city)
     {
-        $c = new Post;
+        $c = new Student;
         $c->name = $name;
         $c->surname = $surname;
         $c->sex = $sex;
@@ -28,9 +28,9 @@ class PostService
     // Возвращает все имеющиеся объявления в виде масссива объектов Post
     // @return Post[]
     
-    public function getAllPosts()
+    public function getAllStudents()
     {
-        return $this->posts;
+        return $this->students;
     }
 
     
