@@ -23,7 +23,7 @@ class TableDataGateway
 {
     private function connectionSQL()
     {
-        $link = mysqli_connect("localhost", "root", "root", "studen");
+        $link = mysqli_connect("localhost", "root", "root", "student");
 
         if ($link == false):
             print("Ошибка: Невозможно подключиться к MySQL " . mysqli_connect_error());
