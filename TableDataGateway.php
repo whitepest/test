@@ -4,8 +4,8 @@ class TableDataGateway
 {
     public function ConnectSQL()
     {
-        $link = mysqli_connect("localhost", "root", "root", "studen");
-        
+        $link = mysqli_connect("localhost", "root", "root", "database");
+
         if ($link == false)
         {
             die('Ошибка подключения (' . mysqli_connect_error() . ')');
@@ -16,8 +16,8 @@ class TableDataGateway
 
     public function RequestOutSQL($link)
     {
-        $sql = "SELECT key, name, surname, group_number, points FROM studen";
-        
+        $sql = "SELECT key, name, surname, group_number, points FROM student";
+
         $result = mysqli_query($link, $sql);
         return $result;
     }
@@ -25,6 +25,6 @@ class TableDataGateway
     function Launch()
     {
         $link = $this->ConnectSQL();
-        return $rows = $this->RequestOutSQL($link);
+        return $this->RequestOutSQL($link);
     }
 }
