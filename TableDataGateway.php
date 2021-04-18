@@ -28,7 +28,7 @@ class TableDataGateway
 
     public function requestOut($pdo)
     {
-        $outPut = $pdo->query('SELECT FirstName, LastName, Groupp, Point FROM student');
+        $outPut = $pdo->query('SELECT FirstName, LastName, NameGroup, Point FROM student');
 
         return $outPut;
     }
