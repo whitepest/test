@@ -7,37 +7,38 @@
     <title>Document</title>
 </head>
 <body>
-    <div class="main">
-        <header>
-            <span>список абитуриентов</span> 
-            <div>
-                <span>поиск:</span>
-                <input type="search" name="q">
-                <input type="submit" id="submitB" value="[найти]"></input>
-            </div>
-        </header>
-        <div class="tableOut">
-            <table width="100%">
-                <tr>
-                    <td>Имя</td>
-                    <td>Фамилия</td>
-                    <td>Номер группы</td>
-                    <td>Баллов</td>
-                </tr>
-            </table>
-            <table width="100% " class="line">
-                <tr>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                    <td></td>
-                </tr>
-            </table>
+<div class="main">
+    <header>
+        <span>список абитуриентов</span>
+        <div>
+            <span>поиск:</span>
+            <input type="search" name="q">
+            <input type="submit" id="submitB" value="[найти]"></input>
         </div>
-        <span>
-            Страницы:
-        </span>
+    </header>
+    <div class="tableOut">
+        <table width="100%">
+            <tr>
+                <td>Имя</td>
+                <td>Фамилия</td>
+                <td>Номер группы</td>
+                <td>Баллов</td>
+            </tr>
+        </table>
+        <table width="100% " class="line">
+            <?php while ($row = $outPut->fetch()): ?>
+                <tr>
+                    <td><?= $row['FirstName'] ?></php></td>
+                    <td><?= $row['LastName'] ?></td>
+                    <td><?= $row['NameGroup'] ?></td>
+                    <td><?= $row['Point'] ?></td>
+                </tr>
+            <?php endwhile; ?>
+        </table>
     </div>
-    <?= var_dump($rows); ?>
+    <span>
+            Страницы:
+    </span>
+</div>
 </body>
 </html>
