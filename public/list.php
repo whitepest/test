@@ -1,10 +1,7 @@
 <?php 
 
 // Инициализируем наше приложение
-require __DIR__ . '/../bootstrap.php';
-
-// Получаем список объявлений
-// $posts = $postService->getAllPosts();
+require (__DIR__ . '/../bootstrap.php');
 
 // Вызываем вид, чтобы отобразить их
-require __DIR__ . '/../view/outPut.phtml';
+require (__DIR__ . '/../view/outPut.phtml');
