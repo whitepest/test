@@ -22,18 +22,20 @@
                 <td>Имя</td>
                 <td>Фамилия</td>
                 <td>Номер группы</td>
-                <td>Баллов</td>
+                <td>Баллы</td>
             </tr>
         </table>
         <table width="100% " class="line">
-            <?php while ($row = $outPut->fetch()): ?>
+            <?php foreach($students as $partList):
+                foreach($partList as $row):?>
                 <tr>
-                    <td><?= $row['FirstName'] ?></php></td>
-                    <td><?= $row['LastName'] ?></td>
-                    <td><?= $row['NameGroup'] ?></td>
-                    <td><?= $row['Point'] ?></td>
+                    <td><?= $row['firstName'] ?></php></td>
+                    <td><?= $row['lastName'] ?></td>
+                    <td><?= $row['groupName'] ?></td>
+                    <td><?= $row['score'] ?></td>
                 </tr>
-            <?php endwhile; ?>
+            <?php endforeach;
+            endforeach;?>
         </table>
     </div>
     <span>

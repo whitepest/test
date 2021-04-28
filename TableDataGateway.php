@@ -1,6 +1,6 @@
 <?php
 
-class TableDataGateway
+class tableDataGateway
 {
     // подключаем pdo
     public function connectPDO(): PDO
@@ -28,8 +28,8 @@ class TableDataGateway
 
     public function requestOut($pdo)
     {
-        $outPut = $pdo->query('SELECT FirstName, LastName, NameGroup, Point FROM student');
+        $outList = $pdo->query('SELECT firstName, lastName, groupName, score FROM student');
 
-        return $outPut;
+        return $outList;
     }
 }

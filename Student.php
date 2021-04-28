@@ -1,21 +1,24 @@
 <?php
-/*
-class Studen
+
+class studentList
 {
-    public $name;
 
-    public $surname;
+    public function createStudentList($outList){
+        $students = [];
+        $listLimit = 1;
+        $partList = 0;
+        while ($student = $outList->fetch()){
+            for($row=0;$row<$listLimit;$row++){
 
-    public $sex;
-
-    public $groupNumber;
-
-    public $email;
-
-    public $points;
-
-    public $year;
-
-    public $city;
+                $students[$partList][$row]=[
+                    'firstName'  =>  $student['firstName'],
+                    'lastName'  =>  $student['lastName'],
+                    'groupName' =>  $student['groupName'],
+                    'score' =>  $student['score']
+                ];
+            }
+            $partList++;
+        }
+        return $students;
+    }
 }
-*/
